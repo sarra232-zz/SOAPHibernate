@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-mar-2020 20:44:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.udea.persistencia.Clima" table="clima" catalog="climadb" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="gradosCentigrados" type="float">
+            <column name="grados_centigrados" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="humedad" type="float">
+            <column name="humedad" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="tipoNubosidad" type="string">
+            <column name="tipo_nubosidad" length="50" not-null="true" />
+        </property>
+        <property name="precipitacion" type="float">
+            <column name="precipitacion" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="viento" type="float">
+            <column name="viento" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="dia" type="date">
+            <column name="dia" length="10" not-null="true" />
+        </property>
+        <property name="idCiudad" type="int">
+            <column name="id_ciudad" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
